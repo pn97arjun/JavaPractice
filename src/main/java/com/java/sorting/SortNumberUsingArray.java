@@ -29,7 +29,7 @@ public class SortNumberUsingArray {
     @Test(priority =1)
     public void sortCharacterWords()
     {
-        String[] a={"Zimbawe","USA","Japan","Australia","India"};
+        String[] a={"Zimbabwe","USA","Japan","Australia","India"};
         String c="";
         for(int k=0;k<a.length;k++)
             System.out.println(a[k]);
