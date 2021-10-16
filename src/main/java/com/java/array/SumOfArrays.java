@@ -2,7 +2,7 @@ package com.java.array;
 
 import org.testng.annotations.Test;
 
-public class ArrayPrograms {
+public class SumOfArrays {
 
     @Test
     public void sumofArray()
