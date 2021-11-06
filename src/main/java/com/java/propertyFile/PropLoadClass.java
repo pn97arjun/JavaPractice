@@ -13,7 +13,7 @@ public class PropLoadClass {
 
         try{
             Properties prop=new Properties();
-            String propPth="/ConfigFile/config.properties";
+            String propPth="./ConfigFile/config.properties";
             BufferedReader reader =new BufferedReader(new FileReader(propPth));
             prop.load(reader);
             String url=prop.getProperty("url");
