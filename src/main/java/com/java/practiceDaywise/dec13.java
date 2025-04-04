@@ -1,7 +1,12 @@
 package com.java.practiceDaywise;
 
+import org.apache.poi.ss.usermodel.DataFormat;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -182,6 +187,50 @@ public void sortWords()
   for(int k=0;k<a.length;k++)
     System.out.println(a[k]+" ");
 }
+
+@Test
+  public void ExcelTest()
+{
+  XSSFWorkbook xssfWorkbook= null;
+  try {
+    xssfWorkbook = new XSSFWorkbook("./data/excelSheet.xlsx");
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
+  XSSFSheet xssfSheet=xssfWorkbook.getSheet("Sheet1");
+
+  int rowcount=xssfSheet.getPhysicalNumberOfRows();
+  System.out.println(rowcount);
+  DataFormatter dataFormatter=new DataFormatter();
+  Object value=dataFormatter.formatCellValue(xssfSheet.getRow(0).getCell(0));
+  System.out.println(value);
+}
+
+@Test
+  public void elemestReverseOrder()
+{
+  int[] arr=new int[]{5,4,3,2,1,};
+
+  for(int i=arr.length-1;i>=0;i--)
+  {
+    System.out.println(arr[i]);
+  }
+}
+
+@Test
+  public void dupliEle()
+  {
+    int[] arr=new int[]{8,8,1,1,2,3,3,4};
+
+    for(int i=0;i<arr.length;i++)
+    {
+      for(int j=i+1;j<arr.length;j++)
+      {
+        if(arr[i]==arr[j])
+          System.out.println(arr[i]);
+      }
+    }
+  }
 
 
 
