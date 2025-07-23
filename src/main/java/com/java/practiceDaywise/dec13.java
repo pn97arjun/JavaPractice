@@ -168,7 +168,7 @@ public void sortNo()
 @Test
 public void sortWords()
 {
-  String[] a={"Bang","Aus","Zimbu"};
+  String[] a={"Zimbawe","Aus","Bang"};
   String c="";
 
   for(int i=0;i<a.length;i++)
