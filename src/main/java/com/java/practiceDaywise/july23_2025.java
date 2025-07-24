@@ -192,6 +192,30 @@ public class july23_2025 {
         System.out.print(reverseSentence.toString());
 
     }
+    @Test
+    public void reverseeachword()
+    {
+        String sentence="Test Automation";
+        char[] chars = sentence.toCharArray(); // Convert the string to a character array
+        int start = 0; // Starting index of the current word
+
+        for (int i = 0; i <= chars.length; i++) {
+            if (i == chars.length || chars[i] == ' ') { // Found a word boundary or end of string
+                int left = start; // Left pointer for reversing the word
+                int right = i - 1; // Right pointer for reversing the word
+
+                while (left < right) {
+                    char temp = chars[left]; // Swap characters
+                    chars[left] = chars[right];
+                    chars[right] = temp;
+                    left++;
+                    right--;
+                }
+                start = i + 1; // Move the starting index to the beginning of the next word
+            }
+        }
+        System.out.print(chars);
+    }
 
 
 }
