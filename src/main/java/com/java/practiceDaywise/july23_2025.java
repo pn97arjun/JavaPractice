@@ -247,6 +247,46 @@ public class july23_2025 {
         }
         System.out.print(result);
     }
+    @Test
+    public void pyramidPg()
+    {
+        int rows=5;
+        for (int i=1;i<=rows;i++)
+        {
+            for(int j=1;j<rows;j++)
+            {
+                System.out.print(" ");
+            }
+            for(int k=1;k<=(2 * i - 1);k++)
+            {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    @Test
+    public void pyra()
+    {
+        int rows = 5; // Get the desired number of rows from the user.
+
+        // Outer loop to iterate through each row.
+        for (int i = 1; i <= rows; i++) {
+
+            // Inner loop to print spaces before the stars (for center alignment).
+            for (int j = i; j < rows; j++) {
+                System.out.print(" ");
+            }
+
+            // Inner loop to print stars for the current row.
+            // The number of stars follows the pattern 2*i - 1 to maintain symmetry.
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+
+            System.out.println(); // Move to the next line after printing each row.
+        }
+    }
 
 }
 
