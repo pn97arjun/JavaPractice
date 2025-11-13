@@ -1,22 +1,22 @@
 package com.java.practiceDaywise;
 
-import org.apache.poi.ss.usermodel.Cell;
-import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.zip.DataFormatException;
 
-public class sep14_2025 {
+public class Nov12_2025 {
     @Test
-    public void palinSep14()
+    public void palinnov12()
     {
-        int n=4541,temp,r=0,sum=0;
+        int n=4541,sum=0,r=0,temp;
         temp=n;
         while(n>0)
         {
@@ -25,32 +25,31 @@ public class sep14_2025 {
             n=n/10;
         }
         if(sum==temp)
-            System.out.println("Palin"+sum);
+            System.out.println("Palindrome"+sum);
         else
-            System.out.println("Not palin"+sum);
+            System.out.println("Not a palindrome");
     }
     @Test
-    public void datesep14()
+    public void datefrnov12()
     {
-        Date date =new Date();
+        Date date=new Date();
         SimpleDateFormat formatter=new SimpleDateFormat("dd/MM/yyyy");
         String dateStr=formatter.format(date);
         System.out.println(dateStr);
     }
     @Test
-    public void swapNo()
+    public void swapNobov12()
     {
         int a=5,b=10;
-        a=a+b; //15
-        b=a-b;//5
-        a=a-b; //10
+        a=a+b;//15
+        b=a-b;//10
+        a=a-b;//5
         System.out.println(a+" "+b);
-
     }
     @Test
-    public void swapStringsep14()
+    public void swapStrnov12()
     {
-        String a="How";
+        String a="how";
         String b="you";
         a=a+b;
         b=a.substring(0,a.length()-b.length());
@@ -58,16 +57,16 @@ public class sep14_2025 {
         System.out.println(a+" "+b);
     }
     @Test
-    public void whiteSpacesep14()
+    public void whitespcnov12()
     {
-        String st="How are you";
-        String rp=st.replaceAll("\\s","");
-        System.out.println(rp);
+        String st="how y u";
+        String rpl=st.replaceAll("\\s","");
+        System.out.println(rpl);
     }
     @Test
-    public void fibbosep14()
+    public void fibbonov12()
     {
-        int f1=0,f2=1,f3=0,n=10;
+        int f1=0,f2=1,f3,n=10;
         System.out.println(f1);
         System.out.println(f2);
         for(int i=1;i<=n;i++)
@@ -79,20 +78,20 @@ public class sep14_2025 {
         }
     }
     @Test
-    public void reversestsep14()
+    public void reverseSt()
     {
-        String st="Test Automation";
-        String r="";
+        String st="malayalam";
+        String rev="";
         for(int i=st.length()-1;i>=0;i--)
         {
-            r+=st.charAt(i);
+            rev+=st.charAt(i);
         }
-        System.out.println(r);
+        System.out.println(rev);
     }
     @Test
-    public void sortNoSep14()
+    public void sortNosinArraynov12()
     {
-        int[] arr=new int[]{4,1,2,3,5,7,6};
+        int[] arr=new int[]{4,2,1,5,3};
         int temp;
         for(int i=0;i<arr.length;i++)
         {
@@ -107,32 +106,33 @@ public class sep14_2025 {
             }
         }
         for(int i=0;i<arr.length;i++)
-            System.out.println(arr[i]);
+            System.out.print(arr[i]);
     }
     @Test
-    public void reverseEleSep14()
+    public void reverseEleArraynov12()
     {
-        int[] arr=new int[]{1,2,3,4};
+        int[] arr=new int[]{5,4,32,1,2};
         for(int i=arr.length-1;i>=0;i--)
         {
             System.out.println(arr[i]);
         }
+
     }
     @Test
-    public void dupliElemeSep14()
+    public void duplinov12()
     {
-        int[] arr=new int[]{1,1,2,2,3,3,4,5};
-       for(int i=0;i<arr.length;i++)
-       {
-           for(int j=i+1;j<arr.length;j++)
-           {
-               if(arr[i]==arr[j])
-                   System.out.println(arr[j]);
-           }
-       }
+        int[] arr=new int[]{1,2,1,2,3,4};
+        for(int i=0;i<arr.length;i++)
+        {
+            for(int j=i+1;j<arr.length;j++)
+            {
+                if(arr[i]==arr[j])
+                    System.out.println(arr[j]);
+            }
+        }
     }
     @Test
-    public void primenoSep14()
+    public  void primenonov12()
     {
         int num=13;
         int temp;
@@ -149,16 +149,16 @@ public class sep14_2025 {
         if(prime)
             System.out.println("prime "+num);
         else
-            System.out.println("Not a prime"+num);
-
+            System.out.println("Not a prime "+num);
     }
+
     @Test
-    public void sortwordsSep12()
+    public void sortwordsnov12()
     {
         String[] c={"Zam","Aus","Ban","WI"};
         String a="";
-        for(int l=0;l<c.length;l++)
-            System.out.print(c[l]+" ");
+        for(int k=0;k<c.length;k++)
+            System.out.print(c[k]+" ");
         for(int i=0;i<c.length;i++)
         {
             for(int j=i+1;j<c.length;j++)
@@ -176,8 +176,9 @@ public class sep14_2025 {
             System.out.print(c[i]+" ");
     }
     @Test
-    public void duplicateCharSep14() {
-        String a="seleniuml";
+    public void duplicharnov12()
+    {
+        String a="selenium l";
         char[] c=a.toCharArray();
         for(int i=0;i<c.length;i++)
         {
@@ -193,10 +194,9 @@ public class sep14_2025 {
             if(count>1 && c[i]!='0')
                 System.out.println(count+" "+c[i]);
         }
-
     }
     @Test
-    public void reverseEachWordSep14()
+    public void reverseachwordnov12()
     {
         String inputString="Test Automation";
         String[] words=inputString.split(" ");
@@ -209,33 +209,33 @@ public class sep14_2025 {
         System.out.println(reverseSentence.toString().trim());
     }
     @Test
-    public void excelProgramSep14() throws Exception {
+    public void excelnov12() throws Exception
+    {
         File file=new File("testdata.xlsx");
         FileInputStream fs=new FileInputStream(file);
         XSSFWorkbook workbook=new XSSFWorkbook(fs);
         XSSFSheet sheet=workbook.getSheet("Sheet1");
-        Row row =sheet.getRow(0);
-        Cell cell=row.getCell(0);
+        XSSFRow row=sheet.getRow(0);
+        XSSFCell cell= row.getCell(0);
         System.out.println(cell.getStringCellValue());
+
     }
     @Test
-    public void pyraSep14()
+    public void pyramid()
     {
         int rows=5;
         for(int i=1;i<=rows;i++)
         {
-
             for(int j=i;j<rows;j++)
             {
                 System.out.print(" "); //space for *
             }
             for(int k=1;k<=(2*i-1);k++)
             {
-                System.out.print("*"); //print * in 2*i-1
+                System.out.print("*"); //2*i-1 formaula
             }
-            System.out.println();//enter next line
+            System.out.println();
         }
     }
-
 
 }
