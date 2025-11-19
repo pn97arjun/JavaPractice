@@ -237,5 +237,26 @@ public class Nov12_2025 {
             System.out.println();
         }
     }
+    @Test
+    public void secondsmallest()
+    {
+        int[] arr=new int[]{4,3,1,2,5};
+        int smallest=Integer.MAX_VALUE;
+        int secondsmallest=Integer.MAX_VALUE;
+
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]<smallest)
+            {
+                secondsmallest=smallest;
+                smallest=arr[i];
+            }
+            else if(arr[i]<secondsmallest && arr[i]!=smallest)
+            {
+                secondsmallest=arr[i];
+            }
+        }
+        System.out.println(secondsmallest);
+    }
 
 }
