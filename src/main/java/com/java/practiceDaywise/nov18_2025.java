@@ -74,4 +74,56 @@ public class nov18_2025 {
         else
             System.out.println("not prime"+num);
     }
+
+    @Test
+    public void secondsmallestnov18()
+    {
+        int[] arr =new int[]{4,3,5,1,2};
+        int smallest=Integer.MAX_VALUE;
+        int secondsmallest=Integer.MAX_VALUE;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]<smallest)
+            {
+                secondsmallest=smallest;
+                smallest=arr[i];
+            }
+            else if(arr[i]<secondsmallest && arr[i]!=smallest)
+            {
+                secondsmallest=arr[i];
+            }
+        }
+        System.out.println(secondsmallest);
+    }
+    @Test
+    public void secondlargestnov18()
+    {
+        int[] arr=new int[]{4,3,2,5,1};
+        int largest=Integer.MIN_VALUE;
+        int secondlargest=Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++)
+        {
+            if(arr[i]>largest)
+            {
+                secondlargest=largest;
+                largest=arr[i];
+            }
+            else if(arr[i]>secondlargest && arr[i]!=largest)
+            {
+                secondlargest=arr[i];
+            }
+        }
+        System.out.println(secondlargest);
+    }
+    @Test
+    public void factorialnov18()
+    {
+        int num=5;
+        int factorial=1;
+        for(int i=1;i<=num;i++)
+        {
+            factorial*=i;
+        }
+        System.out.println(factorial);
+    }
 }
